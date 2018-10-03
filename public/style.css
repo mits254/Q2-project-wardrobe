@@ -54,6 +54,20 @@
  widows:50%;
 
  }
+ #popupBoxOnePosition, #popupBoxHTML1{
+    margin:10px 0 0 0;
+   top: 0; 
+   left: 0; 
+   position: fixed; 
+   width: 100%; 
+   height: 100%;
+   background:rgba(51, 51, 51, 0.555); 
+   display: none; 
+   opacity:.95; 
+   z-index:100;
+   widows:50%;
+  
+   }
 
  .popupBoxWrapper{
  width: 1000px;
@@ -167,4 +181,349 @@ body {
     .nav-links:hover {
         color: rgba(255, 255, 255, 1);
     }
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+  }
+  
+  .overlay.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .main-popup {
+    position: fixed;
+    left: 0;
+    top: 30px;
+    margin: 0;
+    width: 100%;
+    height: 450px;
+    background-color: #e7e7f6;
+    border-radius: 5px;
+    z-index: 15;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all .5s ease;
+    /*overflow: hidden;*/
+  }
+  
+  .main-popup.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px);
+    transition: all .5s ease;
+  }
+  
+  @media (min-width: 500px) {
+    .main-popup {
+      width: 500px;
+      left: 50%;
+      margin: 0 0 0 -250px;
+    }
+  }
+  
+  .popup-header {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 62px;
+    width: 100%;
+  }
+  
+  #popup-close-button a {
+    position: absolute;
+    right: 10px;
+    top: -30px;
+    width: 22px;
+    height: 22px;
+  }
+  
+  #popup-close-button a::before {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 3px;
+    height: 25px;
+    background-color: #fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  #popup-close-button a::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 3px;
+    height: 25px;
+    background-color: #fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+  .popup-header ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .popup-header ul li {
+    text-align: center;
+    list-style: none;
+    width: 50%;
+    float: left;
+  }
+  
+  .popup-header ul li a {
+    display: block;
+    padding: 20px 0;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  #sign-in {
+    background-color: #ceaee8;
+    color: #fff;
+    border-radius: 5px 0 0 0;
+  }
+  
+  #sign-in.active {
+    color: #ceaee8;
+    background-color: transparent;
+  }
+  
+  #register {
+    background-color: #ceaee8;
+    color: #fff;
+    border-radius: 0 5px 0 0;
+  }
+  
+  #register.active {
+    color: #ceaee8;
+    background-color: transparent;
+  }
+  
+  .popup-content {
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  form.sign-in {
+    position: relative; 
+    top: 40px;
+    left: 0;
+    font-size: 1em;
+    opacity: 1;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+  }
+  
+  form.sign-in.move-left {
+    opacity: 0;
+    transform: translateX(-450px);
+  }
+  
+  form label {
+    font-size: 1.1em;
+    color: #ceaee8;
+    margin-left: 23px;
+  }
+  
+  form.sign-in input {
+    border-radius: 5px;
+    width: 90%;
+    height: 40px;
+    margin: 5px 5% 30px 5%;
+    padding: 10px;
+    font-size: 1em;
+    color: #ceaee8;
+    outline: none;
+    border: none;
+  }
+  
+  input#submit {
+    background-color: #ceaee8;
+    color: #fff;
+    height: 50px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 25px;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+    border: none;
+  }
+  
+  form.register {
+    position: relative; 
+    top: -280px;
+    left: 0;
+    font-size: 1em;
+    opacity: 0;
+    transform: translateX(450px);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+  }
+  
+  form.register.move-left {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  form.register input {
+    border-radius: 5px;
+    width: 90%;
+    height: 40px;
+    margin: 5px 5% 15px 5%;
+    padding: 10px;
+    font-size: 1em;
+    color: #ceaee8;
+    outline: none;
+    border: none;
+  }
+  
+  p.check-mark {
+    position: relative;
+    left: 50%;
+    width: 200px;
+    margin: 0 0 0 -100px;
+    padding: 0;
+    text-align: center;
+    color: #ceaee8;
+    font-size: .8em;
+  }
+  
+  p.check-mark a {
+    color: #a48bb9;
+  }
+  
+  p.check-mark input {
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    color: #ceaee8;
+    outline: none;
+    border: none;
+  }
+  
+  p.check-mark label {
+    margin-left: 5px;
+  }
+ 
+  .Contactcontainer {
+	max-width:400px;
+	width:100%;
+	margin:0 auto;
+  margin-top: -50px;
+    
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+	background:#F9F9F9;
+	padding:15px;
+    margin:50px 0;
+    
+}
+
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background: #ceaee8;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+	background: #9b2847;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
 }

@@ -59,19 +59,53 @@
 </html> -->
 
 <% include header.ejs %>
-  <body>
+<body style='background-color:lightgray'>
+    <div style='text-align: center;font-style: italic;
+    font-family: cursive;font-weight: bold;padding-top: 10px'>
+       
+        
+        <h3 style='float: left;padding-left: 20px; font-weight: bold'>
+            <%= items.length %> items 
+        </h3>
+            <div class="dropdown" style='float:right;padding-right: 10px;'>
+                <button class="dropbtn">Sort By :</button>
+                <div class="dropdown-content">
+                    
+                    <a href="/low">Price (low to high)</a>
+                    <a href="/high">Price (high o low)</a>
+                    <a href="/newarrivals">New Arrivals</a>
+                    <a href="/featuredItems">Featured Items</a>
+                </div>
+            </div>
+            <div class="dropdown" style='float:right;padding-right: 10px;'>
+                <button class="dropbtn">Filter</button>
+                <div class="dropdown-content">
+                    
+                    <a href="/earrings">Earrings</a>
+                    <a href="/necklace">Necklace</a>
+                    <a href="/Rings">Rings</a>
+                    <a href="/bracelets">Bracelets</a>
+                </div>
+            </div>
+
+    </div>
+    
+<div style='padding-top: 40px;'>
       <% items.forEach(function(item){ %>
       <div class="wrapper">
           <div class="container">
             <div class="top">
             <img src="<%= item.photo%>" alt="<%= item.name%>" style='height: 400px; max-width:100%; display:inline-block; '>
             </div>
-            <div class="bottom">
+            
+            <div class="bottom" id="<%=item.id%>">
               <div class="left">
                 <div class="details">
-                 <h5><%= item.name %></h5><h4> price : $ <%= item.price%> </h4>
+                 <h5><%= item.name %></h5>
+                 <h4> price : $ <%= item.price%> </h4>
                 </div>
-                <div class="buy"><i class="material-icons">add_shopping_cart</i></div>
+                
+                <div class="buy" id="<%=item.id%>"><i class="material-icons">add_shopping_cart</i></div>
               </div>
               <div class="right">
                 <div class="done"><i class="material-icons">done</i></div>
@@ -79,50 +113,46 @@
                     
                   <h2>This item added to your cart</h2>
                 </div>
-                <div class="remove"><i class="material-icons">clear</i></div>
+                <div class="remove" id="<%=item.id%>"><i class="material-icons">clear</i></div>
               </div>
             </div>
           </div>
+         
+
           <div class="inside">
             <div class="icon"><i class="material-icons">info_outline</i></div>
             <div class="contents">
               <table>
                 <tr>
                   <th>Width</th>
-                  <th>Height</th>
+                  <th>length</th>
                 </tr>
                 <tr>
-                  <td>3000mm</td>
-                  <td>4000mm</td>
+                  <td><%= item.width %> inch</td>
+                  <td><%= item.length%> inch</td>
                 </tr>
                 <tr>
-                  <th>Something</th>
-                  <th>Something</th>
+                  <th>Weight</th>
+                  
                 </tr>
                 <tr>
-                  <td>200mm</td>
-                  <td>200mm</td>
+                  <td><%= item.weight %> oz</td>
+                  
                 </tr>
                 <tr>
-                  <th>Something</th>
-                  <th>Something</th>
+                  <th>Description :</th>
+                  
                 </tr>
                 <tr>
-                  <td>200mm</td>
-                  <td>200mm</td>
+                  <td><%= item.description%></td>
+                  
                 </tr>
-                <tr>
-                  <th>Something</th>
-                  <th>Something</th>
-                </tr>
-                <tr>
-                  <td>200mm</td>
-                  <td>200mm</td>
-                </tr>
+               
               </table>
             </div>
           </div>
         </div>
         <% }); %>
+      </div>
   </body>
 </html>
