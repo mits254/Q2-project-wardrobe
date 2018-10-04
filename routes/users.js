@@ -31,7 +31,7 @@ router.get('/users/:full_name',(req,res, next)=>{
 
 
 router.post('/users', (req, res, next) => {
-    console.log(req.body);
+    //console.log(req.body);
 
   bcrypt.hash(req.body.password, 12)
     .then((hashed_password) => {
