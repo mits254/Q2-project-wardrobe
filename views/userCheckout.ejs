@@ -34,12 +34,20 @@
                         <div class="col-501">
                           <h3>Payment</h3>
                           <label for="fname">Accepted Cards</label>
-                          <div class="icon-container1">
-                            <i class="fa fa-cc-visa" style="color:navy;"></i>
-                            <i class="fa fa-cc-amex" style="color:blue;"></i>
-                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                            <i class="fa fa-cc-discover" style="color:orange;"></i>
-                          </div>
+                          <table> <tr>
+
+                          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" align='center'>
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="GG37QVJQZNCNL">
+                            <td > <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"> 
+                            </td>
+                            <td style="vertical-align:top;padding-top: 10px;">by Paypal</td>
+                          
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" >
+                            </form>
+                          </tr>
+                        
+                          </table>
                           <label for="cname">Name on Card</label>
                           <input type="text" id="cname" name="cardname" placeholder="John More Doe">
                           <label for="ccnum">Credit card number</label>
@@ -63,6 +71,8 @@
                       <label>
                         <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
                       </label>
+                      
+                        
                       <input type="submit" value="Continue to checkout" class="btn1">
                     </form>
                   </div>

@@ -1,0 +1,41 @@
+
+  .footsie {
+    background-image: linear-gradient(260deg, rgb(235, 213, 217) 0%, rgb(199, 199, 243) 100%);
+    border-top: 0.0625em solid lightgrey;
+    bottom: 0;
+    color: black;
+    height: auto;
+    font-size: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    cursor: default;
+  }
+  .footsie .leftFooter,
+  .footsie .rightFooter,
+  .footsie .middleFooter {
+    flex: 1;
+    padding: 0.2em;
+    text-align: center;
+  }
+  .footsie ul {
+    list-style-type: none;
+  }
+  .footsie .list {
+    padding-top: 0.6em;
+  }
+  .footsie .list a {
+    text-decoration: none;
+    color: black;
+  }
+  .footsie .google {
+    text-decoration: underline;
+  }
+  .footsie p {
+    padding: 1.25em;
+  }
+  .footsie span {
+    font-size: 1.2em;
+    color: #1F384D;
+  }
+  
