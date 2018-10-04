@@ -48,7 +48,11 @@
          <p> <input type="text" id="<%=item.id%>" value="1" class="qty"/> x $
           <%= item.price %>
         </p>
+        
         <p class="stockStatus"> In Stock</p>
+       
+          
+          
     </div>  
 
 
@@ -112,6 +116,7 @@
           document.getElementById('subtotal').innerText=arrSum(totprice);
           document.getElementById('total').innerText=arrSum(totprice) + 9;
         });
+       
       }());
     };
     

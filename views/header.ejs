@@ -28,7 +28,7 @@
                     $(`.bottom[id^=${this.id}]`).addClass("clicked");
                     a.push(this.id);
                     geturl(a);
-                    alert(a);
+                   
                 });
                 $('.remove').click(function () {
                     $(`.bottom[id^=${this.id}]`).removeClass("clicked");
@@ -37,7 +37,7 @@
                             a.splice(i, 1);
                         }
                     }
-                    alert(a);
+                   
                 });
             });</script>
 
