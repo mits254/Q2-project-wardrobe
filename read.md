@@ -1,3 +1,4 @@
+
 # WARDROBE
 
 An interactive ecommerce website of jewelry, where you can see different category of items and buy it.
@@ -33,10 +34,6 @@ To play this game click on the link below and follow the instructions. Make sure
 * HTML5 Canvas
 * Knex
 * JavaScript
-
-
-
-
 
 
 
