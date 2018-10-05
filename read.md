@@ -1,41 +1,39 @@
-# WARDROBE by mitali
 
-An interactive ecommerce website for buying the jewelry. 
-An interactive game with an Audio Visualizer component. Score accumulates for the entire song with unlimited lives.
+# WARDROBE
 
-<img src="" />
+An interactive ecommerce website of jewelry, where you can see different category of items and buy it.
 
 ## GETTING STARTED
 
-To buy the products you can filter the items according to your need and add into the cart. we accept paypal.
+To play this game click on the link below and follow the instructions. Make sure your pop-up blocker is disabled.
 
-
-[WARDROBE](https://wardrobemymitali.herokuapp.com/index)
+[Wardrobe-by-mitali](https://wardrobemymitali.herokuapp.com/index)
 
 #### OPTION :
 * Fork and Clone this repository.
 * Run `python -m SimpleHTTPServer` command into the source folder.
-* Open browser at localhost:8000/index
+* Open browser at localhost:8000/page1.html
 * Make sure your pop-up blocker is disabled.
 
-<img src="" />
+[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://youtu.be/0ll8-uO63K8?t=16)
 
-<img src="public/wardrobe.mov"/>
+<img src="public/products.png"/>
+
+
+<img src="public/cart.png"/>
+
 
 ### BEST FEATURE
 
-You can catch the bird food with the beat of the song.
+ Make your girlfriend/wife happy by gifting these precious jewelry. User can checkout the collection, order it online and get it at the doorstep soon. User can also check the location on google maps and visit the store. 
 
 ### TECHNOLOGIES
 
-<img src="" />
-
-* Anime.js
-* Phaser Js
+* Bootstrap
+* Postgresql
 * HTML5 Canvas
-* Surge.sh
+* Knex
 * JavaScript
-
 
 
 
