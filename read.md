@@ -14,12 +14,12 @@ To play this game click on the link below and follow the instructions. Make sure
 * Open browser at localhost:8000/page1.html
 * Make sure your pop-up blocker is disabled.
 
-[![Watch the video](http://i3.ytimg.com/vi/0ll8-uO63K8?t=16/maxresdefault.jpg)](https://youtu.be/0ll8-uO63K8?t=16)
+[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://youtu.be/0ll8-uO63K8?t=16)
 
-<img src="products.png"/>
+<img src="public/products.png"/>
 
 
-<img src="cart.png"/>
+<img src="public/cart.png"/>
 
 
 ### BEST FEATURE
