@@ -12,7 +12,7 @@ To play this game click on the link below and follow the instructions. Make sure
 #### OPTION :
 * Fork and Clone this repository.
 * Run `python -m SimpleHTTPServer` command into the source folder.
-* Open browser at localhost:8000/page1.html
+* Open browser at localhost:8000/index
 * Make sure your pop-up blocker is disabled.
 
 [![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://youtu.be/0ll8-uO63K8?t=16)
